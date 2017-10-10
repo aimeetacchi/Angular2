@@ -3,4 +3,19 @@
 	<li *ngFor="let country of countries">
 		{{ country }}
 	</li>
+	<button class="btn btn-primary" [style.backgroundColor]="isActive ? 'blue' : 'black'">Save</button>
+	<button class="btn btn-primary" (click)="onSave($event)">Click me</button>
+
+	<input [(ngModel)]="input" (keyup.enter)="onKeyUp()" />
 </ul>
+
+<div>
+	<!-- Different Pipes -->
+	{{ country.name | uppercase }} <br/>
+	{{ country.days }} <br/>
+	{{ country.price | currency:'GBP': true: '3.2-2'}}<br/>
+	{{ country.allinclusive }}
+</div>
+
+<!-- USING THE CUSTOM PIPE SUMMARY -->
+<div> {{ text | summary }} </div>
