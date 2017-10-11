@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { CountriesService } from './countries.service';
 //CUSTOM PIPE 
 import { SummaryPipe } from './summary.pipe';
+import { TitleCasePipe } from './title-case.pipe';
 // COMPONENTS
 import { AppComponent } from './app.component';
 import { PlacesComponent } from './places.component';
@@ -16,7 +17,8 @@ import { CountriesComponent } from './countries/countries.component';
     AppComponent,
     PlacesComponent,
     CountriesComponent,
-    SummaryPipe
+    SummaryPipe,
+    TitleCasePipe
   ],
   imports: [
     BrowserModule,

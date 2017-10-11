@@ -1,13 +1,16 @@
 
 <ul>
+	<!-- *ngFor -->
 	<li *ngFor="let country of countries">
 		{{ country }}
 	</li>
-	<button class="btn btn-primary" [style.backgroundColor]="isActive ? 'blue' : 'black'">Save</button>
-	<button class="btn btn-primary" (click)="onSave($event)">Click me</button>
-
-	<input [(ngModel)]="input" (keyup.enter)="onKeyUp()" />
 </ul>
+<!-- Style Binding -->
+<button class="btn btn-primary" [style.backgroundColor]="isActive ? 'blue' : 'black'">Save</button>
+<!-- Event Binding -->
+<button class="btn btn-primary" (click)="onSave($event)">Click me</button>
+<!-- 2 way data binding -->
+<input [(ngModel)]="input" (keyup.enter)="onKeyUp()" />
 
 <div>
 	<!-- Different Pipes -->
@@ -17,5 +20,12 @@
 	{{ country.allinclusive }}
 </div>
 
-<!-- USING THE CUSTOM PIPE SUMMARY -->
+<!-- USING A CUSTOM PIPE summary -->
 <div> {{ text | summary }} </div>
+
+<!-- USING A CUSTOM PIPE titleCase and 2 way Data Binding with [(ngModel)] -->
+<div> <input [(ngModel)]="input2" (keyup.enter)="copyMe()"/> <br/> {{ input2 | titleCase }}</div>
+
+<!-- Click to add a class. class binding. -->
+<div class="star" [class.starFull]="isClicked" (click)="isClicked = !isClicked;">
+</div>

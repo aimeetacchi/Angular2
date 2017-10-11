@@ -27,6 +27,7 @@ export class CountriesComponent {
   	console.log(this.input)
   }
 
+    // Country Object
   	country = {
   		name: "Italy",
   		days: "7 days",
@@ -36,4 +37,14 @@ export class CountriesComponent {
 
   // RANDOM TEXT.. THAT USES THE CUSTOM PIPE
     text = `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis sunt, eos doloremque adipisci eveniet inventore placeat cum repellat eum, est dolor. Ipsum distinctio quam eum voluptate a recusandae. Adipisci, aliquid.`;
+
+   
+    isClicked = false;
+
+
+    input2 = "Type Something here";
+    copyMe(){
+      return this.input2;
+    }
+
 }

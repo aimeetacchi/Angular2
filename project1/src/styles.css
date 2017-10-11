@@ -5,3 +5,38 @@
 	width: 80%;
 	margin: 0 auto;
 }
+
+.star {
+	position: relative;
+	padding: 2em 0;
+	color: rebeccapurple;
+}
+
+.star:before {
+	content: "\f006";
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 3em;
+	position: absolute;
+	top: 10px;
+	left: 0;
+}
+
+.starFull {
+	position: relative;
+	padding: 2em 0;
+}
+
+.starFull:before {
+	content: "\f005";
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 3em;
+	position: absolute;
+	top: 10px;
+	left: 0;
+}
