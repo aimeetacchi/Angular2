@@ -16,7 +16,7 @@ export class CountriesComponent {
   	this.countries = service.getCountries();  
   }
 
-  isActive = false;
+  isActive = true;
 
   onSave($event){
   	console.log("Button was clicked", $event);
