@@ -1,0 +1,13 @@
+nav > .navitems {
+	list-style: none;
+	text-align: center;
+	background-color: #0F4392;
+	color:#FF8B8B;
+} 
+
+nav > .navitems li {
+	display: inline-block;
+	border:1px solid;
+	padding: .5em 1em;
+
+}

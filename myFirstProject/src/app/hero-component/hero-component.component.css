@@ -1,0 +1,14 @@
+.heroContainer {
+	background-color: black;
+	background: url('https://dummyimage.com/1024x600/d9f0ff/fff.jpg') no-repeat center center;
+	height: 50%;
+	background-size:cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.heroContent {
+	text-align: center;
+	padding: 1em;
+}
