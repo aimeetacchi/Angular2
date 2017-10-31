@@ -1,3 +1,5 @@
+@import '~sass/variables';
+
 .heroContainer {
 	background-color: black;
 	background: url('https://dummyimage.com/1024x600/d9f0ff/fff.jpg') no-repeat center center;
@@ -16,6 +18,7 @@
 
 .heroContent h1 {
 	font-size: 3em;
+	color: $primary-color-heading1;
 	margin: 0;
 }
 
