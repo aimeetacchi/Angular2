@@ -1,5 +1,8 @@
 # MyFirstProject
 
+This is my first project built without a TUT. Just a basic Website app with routes. Will add more soon.
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
 
 ## Development server
