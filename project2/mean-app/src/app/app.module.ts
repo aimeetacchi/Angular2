@@ -4,6 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
+
+// Service 
+import { PostsService } from './posts.service';
+
 // Components
 import { AppComponent } from './app.component';
 import { PostsComponent } from './posts/posts.component';
@@ -33,7 +37,7 @@ const ROUTES = [
     HttpModule,
     RouterModule.forRoot(ROUTES) // Add routes to the app
   ],
-  providers: [],
+  providers: [PostsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
