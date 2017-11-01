@@ -1,0 +1,9 @@
+html,body {
+	font-family: 'Gloria Hallelujah', cursive;
+	background-color: #efefef;
+}
+
+.main-content {
+	padding-top: 60px;
+	color: #333;
+}
