@@ -8,10 +8,26 @@
 
 html,body {
 	font-family: 'Gloria Hallelujah', cursive;
-	background-color: #efefef;
+	background-color: #155263;
 }
 
 .main-content {
 	padding-top: 60px;
 	color: #333;
+}
+
+.btn-info {
+	background-color: #FF9A3C!important;
+	border-color: #FF9A3C!important;
+	transition: all .2s ease-in;
+}
+
+.btn-info:hover {
+	background-color: #FFC93C!important;
+	border-color: #FF9A3C!important;
+}
+
+.btn-info:active {
+	background-color: #FFC93C!important;
+	border-color: #FF9A3C!important;
 }
