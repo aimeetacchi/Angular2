@@ -22,13 +22,13 @@ export class UserComponent implements OnInit {
   ngOnInit() {
   	console.log('ngOnInit ran');
 
-  	this.name = 'Aimee Tacchi';
-  	this.email = 'aimeetacchi@hotmail.co.uk';
+  	this.name = 'John Doe';
+  	this.email = 'test@test.co.uk';
   	this.age = 33;
   	this.address = {
-  		street: '15 Birchside',
-  		city: 'Dunstable',
-  		county: 'Bedfordshire'
+  		street: '43 Birchslow',
+  		city: 'Buntown',
+  		county: 'Redshire'
   	}
   	this.hobbies = ['tea', 'travel', 'draw', 'code'];
 
