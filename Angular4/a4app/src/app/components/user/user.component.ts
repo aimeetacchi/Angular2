@@ -60,9 +60,9 @@ export class UserComponent implements OnInit {
   	this.email = 'test@test.co.uk';
   	this.age = 33;
   	this.address = {
-  		street: '25 Boardside',
-  		city: 'Timber',
-  		county: 'Greenseeshire'
+  		street: '43 Birchslow',
+  		city: 'Buntown',
+  		county: 'Redshire'
   	}
   	//this.hobbies = ['tea', 'travel', 'draw', 'code'];
     this.catsNames = ['Reno', 'Jimmy', 'Denzel']
