@@ -8,60 +8,139 @@ import { DataService } from '../../services/data.service';
 })
 export class UserComponent implements OnInit {
 	name: string;
+
+  cat = {
+    name: '',
+    email: '',
+    phone: ''
+  }
+
 	age: number;
+  birthday = new Date(1984, 10, 18);
 	email: string;
 	address: Address;
-	hobbies: string[];
-	posts: Post[];
+	//hobbies: string[];
+  catsNames: string[];
+	users: object;
+
+  text:string = 'I am learning Angular';
+  text2:string = 'Type in the text box to change me';
+
+  // === For showing the user panel if true or false
 	isEdit: boolean = false;
+  showAge: boolean = true;
+
+  imageUrl:string = 'http://lorempixel.com/400/200';
+  isUnchanged:boolean = false;
+
+  // ngClass ====
+  isRed = true;
+  canSave = true;
+  currentClasses = {};
+
+  data:any[] = []
 
   constructor(private dataService:DataService) {
-  	console.log('constructor ran..')
+  	console.log('constructor ran..');
+    this.setCurrentClasses();
+
+    // Observable ----
+    // this.dataService.getData().subscribe(data => {
+    //     //console.log(data);
+    //     this.data.push(data);
+    // });
   }
 
-  ngOnInit() {
+
+
+  ngOnInit(): void {
   	console.log('ngOnInit ran');
 
-  	this.name = 'Aimee Tacchi';
-  	this.email = 'aimeetacchi@hotmail.co.uk';
+  	this.name = 'John Doe';
+  	this.email = 'test@test.co.uk';
   	this.age = 33;
   	this.address = {
-  		street: '15 Birchside',
-  		city: 'Dunstable',
-  		county: 'Bedfordshire'
+  		street: '25 Boardside',
+  		city: 'Timber',
+  		county: 'Greenseeshire'
   	}
-  	this.hobbies = ['tea', 'travel', 'draw', 'code'];
+  	//this.hobbies = ['tea', 'travel', 'draw', 'code'];
+    this.catsNames = ['Reno', 'Jimmy', 'Denzel']
 
-  	this.dataService.getPosts().subscribe((posts) => {
-  		//console.log(posts)
-  		this.posts = posts;
-  	});
+  	this.dataService.getUsers().subscribe((users) => {
+  		console.log(users)
+  		this.posts = users;
+  	},
+    (error) => {
+      console.log(error);
+    });
   }
 
-  onClick(){
-  	console.log('Hello');
+  // Function to set classes
+  setCurrentClasses(){
+    this.currentClasses = {
+      saveable:this.canSave,
+      red: this.isRed
+    }
+  }
+// ===== CLICK EVENT =====
+  onClick(e){
+  	console.log(e);
   }
 
-  addHobby(hobby){
-  	console.log(hobby);
-  	this.hobbies.unshift(hobby);
-  	return false;
-  }
+// ===== MOUSE OVER EVENT ======
+ onMouseOver(e){
+   console.log(e);
+ }
 
-  deleteHobby(hobby){
-  	for(let i = 0; i < this.hobbies.length; i++){
-  		if(this.hobbies[i] == hobby){
-  			this.hobbies.splice(i, 1);
-  		}
-  	}
-  }
+// On Submit Form V1 ======
+  // addHobby(hobby){
+  // 	console.log(hobby);
+  // 	this.hobbies.unshift(hobby);
+  // 	return false;
+  // }
 
+  // deleteHobby(hobby){
+  // 	for(let i = 0; i < this.hobbies.length; i++){
+  // 		if(this.hobbies[i] == hobby){
+  // 			this.hobbies.splice(i, 1);
+  // 		}
+  // 	}
+  // }
+
+ // On Submit V2 - Add Cat
+ // TEMPLATE DRIVEN FORMS AND VALIDATION
+ addCat({value, valid}){
+   if(valid){
+     console.log(value);
+     this.catsNames.push(this.cat.name);
+
+   } else {
+   console.log('Form is invalid');
+   }
+  
+ }
+
+// === CHANGING PROPERTIES WITH EVENTS
   toggleEdit(){
   	this.isEdit = !this.isEdit;
   }
 
+  //==== KEYUP EVENT
+  keyEvent(e){
+      console.log(e.key);
+  }
+
+  ChangeText2(e) {
+    this.text2 = e.target.value;
+  }
+
 }
 
+
+
+
+// Interface that you could export and put in another file and import them into here.
 interface Address {
 	street: string,
 	city: string,

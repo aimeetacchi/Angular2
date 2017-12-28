@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
-import { HttpModule } from '@angular/http';
+// HttpClientModule 
+import {HttpClientModule} from '@angular/common/http';
 
 // ROUTES - NAVIGATION
 import { RouterModule, Routes } from '@angular/router';
@@ -28,8 +29,8 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
-    HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [DataService],
