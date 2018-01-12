@@ -1,10 +1,10 @@
 # Angular2
 Angular Projects and Tutorials I've done so I can get an understanding of how it all works.
 
+Tidied up repo, removed old directories - 12/01/17
+All Angular code will be in Angular4 Repo now.
 
 ===============
-
-myFirstProject - Building my first Angular project without Tut. (Updated Version in Angular 4 Repo)
 
 Classes with ngclass and ngstyle
 
