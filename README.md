@@ -4,8 +4,6 @@ Angular Projects and Tutorials I've done so I can get an understanding of how it
 
 ===============
 
-CatDirectory - Followed the Tour of Heros Tut on the Angular - https://angular.io/tutorial
-
 myFirstProject - Building my first Angular project without Tut. (Updated Version in Angular 4 Repo)
 
 Classes with ngclass and ngstyle
