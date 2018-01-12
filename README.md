@@ -2,10 +2,13 @@
 Angular Projects and Tutorials I've done so I can get an understanding of how it all works.
 
 
+===============
 
 CatDirectory - Followed the Tour of Heros Tut on the Angular - https://angular.io/tutorial
 
-myFirstProject - Building my first Angular project without Tut.
+myFirstProject - Building my first Angular project without Tut. (Updated Version in Angular 4 Repo)
+
+Classes with ngclass and ngstyle
 
 Ninja-directory	- NetNjina tut on youtube, but little out of date - https://www.youtube.com/playlist?list=PL4cUxeGkcC9jqhk5RvBiEwHMKSUXPyng0
 
